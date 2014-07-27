@@ -13,9 +13,9 @@ Over the semester we will be exploring design topics like form, color, grids, ty
 
 Week 1: Intro to Creative Coding and Processing
 
-Week 2: Forms and Shapes
+Week 2: Forms, Shapes and Variables
 
-Week 3: Variables, Patterns and Computational Color
+Week 3: Patterns and Computational Color
 
 Week 4: Decisions, Randomization and Export (PDF and PNG)
 
