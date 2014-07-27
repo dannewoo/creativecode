@@ -38,3 +38,13 @@ Week 12: Computer Vision
 Week 13: In Class Work Session
 
 Week 14: Final Presentations
+
+Professors Contact Info
+
+Name: Danne Woo
+
+Email: dwoo@qc.cuny.edu
+
+URL: dannewoo.com
+
+Twitter: @dannewoo
