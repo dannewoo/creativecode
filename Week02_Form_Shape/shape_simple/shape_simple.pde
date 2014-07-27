@@ -1,3 +1,8 @@
+int circleSize = 100;
+int rectSize = 100;
+int triSize = 100;
+int padding = 175;
+
 void setup() {
   size(600,400);
   background(255);
@@ -6,17 +11,17 @@ void setup() {
   fill(0);
   noStroke();
   //circle
-  ellipse(175, 100, 100, 100);
+  ellipse(padding, circleSize, circleSize, circleSize);
   //square
-  rect(width - 175 - 100/2, 100/2, 100, 100);
+  rect(width - padding - rectSize/2, rectSize/2, rectSize, rectSize);
   //triangle
   pushMatrix();
-  translate(175 - 100/2, height - 175);
-  triangle(0, 100, 100/2, 0, 100, 100);
+  translate(padding - triSize/2, height - padding);
+  triangle(0, triSize, triSize/2, 0, triSize, triSize);
   popMatrix();
   //quadrilateral
   pushMatrix();
-  translate(width - 175 - 60, height - 175);
+  translate(width - padding - 60, height - padding);
   quad(0, 10, 120, 0, 100, 70, 20, 100);
   popMatrix();
 }
