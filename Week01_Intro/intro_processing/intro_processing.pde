@@ -9,5 +9,5 @@ void setup() {
   fill(50);
   rect(0, 0, 100, 100);
   //Printing out information to the console below.
-  println("Hello world!");
+  println("Hello world!!!");
 }
