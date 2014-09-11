@@ -15,9 +15,9 @@ Week 1: Intro to Creative Coding and Processing
 
 Week 2: Forms, Shapes and Variables
 
-Week 3: Patterns and Computational Color
+Week 3: Computational Color and Export
 
-Week 4: Decisions, Randomization and Export (PDF and PNG)
+Week 4: Repetition, Decisions and Randomization
 
 Week 5: Typography and Geomerative
 
