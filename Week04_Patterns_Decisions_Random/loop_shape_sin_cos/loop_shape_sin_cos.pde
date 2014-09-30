@@ -8,10 +8,9 @@ void setup() {
   fill(0);
 
   beginShape();
-  for (int j = 0; j < points; j++)
-  {
-    float vertexX = sin(radians(j * (360/points))) * d;
-    float vertexY = cos(radians(j * (360/points))) * d;
+  for (int i = 0; i < points; i++) {
+    float vertexX = sin(radians(i * (360/points))) * d;
+    float vertexY = cos(radians(i * (360/points))) * d;
     vertex(vertexX, vertexY);
   }
   endShape();

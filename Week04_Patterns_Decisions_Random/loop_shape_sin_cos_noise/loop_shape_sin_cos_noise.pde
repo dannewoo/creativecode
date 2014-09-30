@@ -9,16 +9,12 @@ void setup() {
 
   beginShape();
   float noiseCount = 0;
-  for (int j = 0; j < points; j++)
-  {
+  for (int i = 0; i < points; i++) {
     float randomValue;
-    if (j % 2 == 1) {
-      randomValue = -noise(noiseCount);
-    } else {
-      randomValue = noise(noiseCount);
-    }
-    float vertexX = sin(radians(j * (360/points))) * (d + (randomValue*100));
-    float vertexY = cos(radians(j * (360/points))) * (d + (randomValue*100));
+    if (i % 2 == 1) randomValue = -noise(noiseCount);
+    else randomValue = noise(noiseCount);
+    float vertexX = sin(radians(i * (360/points))) * (d + (randomValue*100));
+    float vertexY = cos(radians(i * (360/points))) * (d + (randomValue*100));
     vertex(vertexX, vertexY);
     noiseCount += 0.2;
   }
