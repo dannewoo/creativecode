@@ -25,19 +25,21 @@ Week 6: Data Visualization
 
 Week 7: Midterm Presentations
 
-Week 8: Draw and Kinetic Forms
+Week 8: Kinetic Forms
 
-Week 9: Image Import and Interaction (Mouse)
+Week 9: Drawing and Interaction (Mouse)
 
-Week 10: Objects and Interaction (Keyboard and Events)
+Week 10: Image Import and Interaction (Keyboard and Events)
 
 Week 11: 3D
 
-Week 12: Computer Vision
+Week 12: Audio
 
-Week 13: In Class Work Session
+Week 13: Computer Vision
 
-Week 14: Final Presentations
+Week 14: In Class Work Session
+
+Week 15: Final Presentations
 
 ### Professors Contact Info
 
