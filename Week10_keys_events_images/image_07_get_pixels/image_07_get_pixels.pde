@@ -11,7 +11,6 @@ void setup() {
 void draw() {
   background(255);
   s = map(mouseX, 0, width, 1, 100);
-  loadPixels();  
   for (int y = 0; y < img.height; y+=s ) {
     for (int x = 0; x < img.width; x+=s) {
       int loc = x + (y * img.width);
