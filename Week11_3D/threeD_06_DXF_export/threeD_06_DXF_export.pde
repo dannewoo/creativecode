@@ -6,7 +6,6 @@ void setup() {
   size(600, 400, P3D);
   background(0);
   noStroke();
-  sphereDetail(10);
 }
 
 void draw() {
