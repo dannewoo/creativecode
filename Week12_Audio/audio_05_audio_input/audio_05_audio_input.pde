@@ -26,3 +26,13 @@ void draw() {
     line( i, 300 + in.right.get(i)*50, i+1, 300 + in.right.get(i+1)*50 );
   }
 }
+
+void keyPressed() {
+  if ( key == 'm' || key == 'M' ) {
+    if ( in.isMonitoring() ) {
+      in.disableMonitoring();
+    } else {
+      in.enableMonitoring();
+    }
+  }
+}

@@ -17,7 +17,7 @@ void setup(){
 //  noStroke();
   rectMode(CENTER);
   minim = new Minim(this);
-  song = minim.loadFile("father_john_misty.mp3", 1024);
+  song = minim.loadFile("biggie_miley.mp3", 1024);
   song.loop();
   fftLin = new FFT( song.bufferSize(), song.sampleRate() );
   fftLin.linAverages( 50 );
