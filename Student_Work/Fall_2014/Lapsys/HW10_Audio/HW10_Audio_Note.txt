@@ -1,0 +1,13 @@
+Hello Professor,
+
+This week for homework I made a simplistic sequencer.
+It's essentially a one-bar loop made of 8-th notes.
+
+There's an 8 by 8 array of buttons that can be turned on/off.
+The algorithm cycles through columns at the speed of 8-th notes and checks whichever buttons on a chosen column are on.
+When on, the buttons play a sound of higher or lower pitch depending on their placement in the column (higher up = higher pitch).
+
+Left-click a button to turn it on.
+Right-click it to turn it off.
+
+I put comments inside the code to explain the usage of involved functions and variables.
