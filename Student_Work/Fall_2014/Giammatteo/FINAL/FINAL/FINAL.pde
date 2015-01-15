@@ -1,7 +1,7 @@
 //stars
 float[] size, posX, posY, posZ;
 float xOffset = 3.0, speed = 0.001;
-int stars = 1200;
+int stars = 200;
 float angle;
 
 //audio
@@ -37,8 +37,7 @@ void setup() {
   height3 = height/3;
   height23 = 2*height/3;
   
-//  img = loadImage("FINAL_bg.jpg");
-//  image(img, 0, 0);  
+
 
 //mapping out random size and locations of stars
   size = new float[stars];
@@ -52,7 +51,7 @@ void setup() {
     posZ[i] = random(-width, width);
   }
 
-  frameRate(60);
+//  frameRate(60);
 
   minim = new Minim(this);
   player = minim.loadFile("Explosions_in_the_sky_-_First_breath_aft.mp3", 1024);
@@ -68,6 +67,9 @@ void setup() {
     fill(random(140, 255));
     sphere(size[i]);
   }
+  
+
+  
 }
 
 ///////////////////////////////////////////////////////////
@@ -76,11 +78,14 @@ void setup() {
 ///////////////////////////////////////////////////////////
 
 void draw() {
-  frameRate(20);
+  //frameRate(20);
   
   fftLin.forward(player.left);
   fftLog.forward(player.right);
-   
+//  img = loadImage("FINAL_bg.jpg");
+//  image(img, 0, 0);  
+  
+  //background(0);
  loadPixels();
 float xoff = 0.0;
 for (int x = 0; x < width; x++) {
@@ -121,38 +126,39 @@ frameRate(60);
  noFill();
   for(int k = 0; k < fftLin.specSize(); k++) {
    stroke(200);
-   stroke(57, random(200,255), 253);
+   stroke(252, 182, 41);
+   //stroke(57, random(200,255), 253); //BLUE
   // stroke(57, 255, 253);
     ellipse(width/2, height/2, height3, height3 - fftLin.getBand(k)*spectrumScale);
   }
 popMatrix();
 
 pushMatrix();
-frameRate(60);
+//frameRate(60);
 //rotateY(radians(angle));
 //rotateX(radians(angle));
  noFill();
   for(int k = 0; k < fftLin.specSize(); k++) {
    stroke(100);
-   stroke(252, 182, 41);
+   stroke(252, 182, 41); //YELLOW
     ellipse(width/2, height/2, height3*2, height3*2 - fftLin.getBand(k)*spectrumScale);
   }
 popMatrix();
 
 pushMatrix();
-frameRate(60);
+//frameRate(60);
 //rotateY(radians(angle));
 //rotateX(radians(angle));
  noFill();
   for(int k = 0; k < fftLin.specSize(); k++) {
-   stroke(150);
+   stroke(150); //GRAY
 //   stroke(57, 255, 253);
     ellipse(width/2, height/2, height3*1.5, height3*1.5 - fftLin.getBand(k)*spectrumScale);
   }
 popMatrix();
 popMatrix();
 
-//STARS
+  //STARS
 xOffset+=speed*1.25; 
 pushMatrix();
 translate(width/2, height/2, 0);
