@@ -11,7 +11,7 @@ int randImg;
 int startX, startY, imgW, imgH;
 
 void setup(){
-  size(displayWidth, displayHeight);
+  size(displayWidth - 100, displayHeight - 100);
   background(255);
   strokeWeight(40);
   textAlign(CENTER, CENTER);

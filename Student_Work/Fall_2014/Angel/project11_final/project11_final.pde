@@ -2,7 +2,7 @@ int frames = 15;
 PGraphics pg[] = new PGraphics[frames];
 
 void setup() {
-  size(600, 400);
+  size(displayWidth - 100, displayHeight - 100);
   //colorMode(HSB, 360, 100, 100);
   for(int i=0; i<frames; i++) {
     pg[i] = createGraphics(width, height);

@@ -18,7 +18,7 @@ color[] colors = {color(c, 270, 50, 40), color((c + 90) % 360, 80, 80), color((c
 
 
 void setup(){
-   size(1000, 600);
+   size(displayWidth - 100, displayHeight - 100);
     colorMode(HSB, 360, 100, 100);
     background(100, 0, 0);
     minim = new Minim(this);
