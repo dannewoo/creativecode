@@ -5,6 +5,7 @@ void setup()
   smooth();
   noFill();
   strokeWeight(3);
+  noiseSeed(4);
 
   // draw 10 times across the screen
   for(int j = 0; j < 10; j++) {
@@ -14,7 +15,7 @@ void setup()
 
     // make the 5 last lines be different
     if(j > 4) {
-      noiseSeed(round(random(100)));
+      noiseSeed(0);
       stroke(255);
     } else {
       stroke(220, 50, 50);
