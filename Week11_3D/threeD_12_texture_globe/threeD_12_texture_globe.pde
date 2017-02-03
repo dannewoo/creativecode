@@ -24,14 +24,16 @@ void setup() {
 
 void draw() {
   background(0);
-  camera(width/2+map(mouseX, 0, width, -2*width, 2*width), 
-         height/2+map(mouseY, 0, height, -height, height),
-         height/2/tan(PI*30.0 / 180.0), 
-         width, height/2.0, 0, 
-         0, 1, 0);
+//  camera(width/2+map(mouseX, 0, width, -2*width, 2*width), 
+//         height/2+map(mouseY, 0, height, -height, height),
+//         height/2/tan(PI*30.0 / 180.0), 
+//         width, height/2.0, 0, 
+//         0, 1, 0);
 
   pushMatrix();
-  translate(width/2, height/2, 0);
+  translate(width/2, height/2, -width);
+  rotateY(map(mouseX, 0, width, -PI, PI));
+  rotateX(map(mouseY, 0, height, -PI, PI));
   textureSphere(200, 200, 200, img);
   popMatrix();
 }
