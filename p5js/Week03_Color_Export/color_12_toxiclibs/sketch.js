@@ -15,6 +15,8 @@ function setup() {
 	rectMode(CENTER);
 	fill(redColor.hue(), redColor.saturation(), redColor.brightness());
 	rect(width/2, height/2, 130, 130);
+
+	print(toxi);
 }
 
 
