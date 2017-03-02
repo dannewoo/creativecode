@@ -1,4 +1,4 @@
-var fontSize = 48;
+var fontSize = 100;
 var word = "Hello World!";
 var path, polys;
 
@@ -10,7 +10,7 @@ function setup(){
     f = new Rune.Font("fonts/ShadowsIntoLight.ttf") 
     // load the font
     f.load(function(err){     
-        path = f.toPath(word, 0, 0, 100) // this is a rune function
+        path = f.toPath(word, 0, 0, fontSize) // this is a rune function
         polys = path.toPolygons({ spacing: rSpacing }) // this is another handy function to get polygons coordinates
         // now we can draw based on the polygon points
         fill(255, 0, 0, 150);
