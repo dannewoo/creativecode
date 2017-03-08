@@ -10,7 +10,7 @@ function setup(){
     // load the font
     f.load(function(err){     
         path = f.toPath(word, 0, 0, fontSize) // this is a rune function
-        polys = path.toPolygons({ spacing: 3 }) // this is another handy function to get polygons coordinates
+        polys = path.toPolygons({ spacing: 30 }) // this is another handy function to get polygons coordinates
         // now we can draw based on the polygon points
         noFill()
         fill(255);

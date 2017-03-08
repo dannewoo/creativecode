@@ -23,7 +23,7 @@ function setup(){
                 var vec1 = poly.state.vectors[j];
                 var vec2 = poly.state.vectors[j - 1];
                 var r = random(-2, 2);
-                strokeWeight(noise(noiseCount)*3);
+                strokeWeight(noise(noiseCount)*10);
                 line(vec1.x, vec1.y, vec2.x, vec2.y);
                 noiseCount += 0.5;
             }
