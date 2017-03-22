@@ -25,7 +25,7 @@ function setup() {
       // Goes through all the columns and all the rows
       // and pushs the data points to the values
       if(j == 0) words.push(data.getString(i, j));
-      if(j == 1) values.push(data.getString(i, j));
+      if(j == 1) values.push(data.getNum(i, j));
     }
   }
   
