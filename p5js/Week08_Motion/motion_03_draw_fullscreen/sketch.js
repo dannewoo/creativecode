@@ -1,6 +1,6 @@
 function setup() {
 	// Creates a canvas based on the width and height of the browser window.
-	createCanvas(window.innerWidth, window.innerHeight);	
+	createCanvas(windowWidth, windowHeight);	
 	// Creates a canvas the width and height of your screen.
 	// createCanvas(displayWidth, displayHeight);
 	background(255);
