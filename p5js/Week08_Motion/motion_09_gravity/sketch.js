@@ -12,10 +12,10 @@ function setup() {
 
 function draw() {
   background(255);
-  // Add speed to location.
-  y = y + speed;
   // Add gravity to speed.
   speed = speed + gravity;
+  // Add speed to location.
+  y = y + speed;
   // When the rect reaches the bottom reverse direction.
   if (y > height - s/2) {
     // Multiplying by -0.95 instead of -1 slows the square each time
