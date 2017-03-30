@@ -1,46 +1,45 @@
-var brush = true;
+var brush = 0;
 var bx = 20;
 var by = 20;
 var bw = 50;
 var bh = 20;
 var by2 = by + bh + 10;
-var mPressed = false;
+var b1, b2;
 
 function setup() {
   createCanvas(600, 400);
   background(0);
   noStroke();
+  // Create a new interface class for each button and brush.
+  b1 = new Interface(bx, by, bw, bh, color(100, 0, 0), color(255, 0, 0), 0, 20);
+  b2 = new Interface(bx, by2, bw, bh, color(255), color(100), 1, 40);
 }
 
 function draw() {
-  if(((mouseX < bx) || (mouseX > bx + bw) || (mouseY < by) || (mouseY > by + bh)) && brush == true && mPressed == true) {
-    fill(255, 0, 0, 50);
-    ellipse(mouseX, mouseY, 20, 20);
-  }
-  if(((mouseX < bx) || (mouseX > bx + bw) || (mouseY < by2) || (mouseY > by2 + bh)) && brush == false && mPressed == true) {
-    fill(255, 50);
-    ellipse(mouseX, mouseY, 40, 40);
-  }
-  if((mouseX > bx) && (mouseX < bx + bw) && (mouseY > by) && (mouseY < by + bh) && mPressed == true) {
-    fill(255, 0, 0);
-    brush = true;
-  } else {
-    fill(100, 0, 0);
-  }
-  rect(bx, by, bw, bh);
-  if ((mouseX > bx) && (mouseX < bx + bw) && (mouseY > by2) && (mouseY < by2 + bh) && mPressed == true) {
-    fill(255);
-    brush = false;
-  } else {
-    fill(100);
-  }
-  rect(bx, by2, bw, bh);
+  // Draw the button and brush to the canvas.
+  b1.button();
+  b1.brush();
+  b2.button();
+  b2.brush();
 }
 
-function mousePressed() {
-	mPressed = true;
-}
-
-function mouseReleased() {
-	mPressed = false;
+// Create a interface class with the button and the brush functions inside.
+// Passing in a x, y, width, height, button color, button hover color, brush value and brush size.
+function Interface(x, y, w, h, c1, c2, b, bSize) {
+  this.button = function() {
+    if((mouseX > x) && (mouseX < x + w) && (mouseY > y) && (mouseY < y + h) && mouseIsPressed) {
+      fill(c1);
+      brush = b;
+    } else {
+      fill(c2);
+    }
+    rect(x, y, w, h);
+  }
+  this.brush = function() {
+    if(((mouseX < x) || (mouseX > x + w) || (mouseY < y) || (mouseY > y + h)) && brush == b && mouseIsPressed) {
+      if (b == 0) fill(255, 0, 0, 50);
+      if (b == 1) fill(255, 50);
+      ellipse(mouseX, mouseY, bSize, bSize);
+    }
+  }
 }

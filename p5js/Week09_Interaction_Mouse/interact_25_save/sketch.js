@@ -8,12 +8,10 @@ function setup(){
 }
 
 function draw() {
-
-}
-
-function mouseDragged() {
-    fill(255, 0, 0, 40);
-    ellipse(mouseX, mouseY, 30, 30);
+	if (mouseIsPressed) {
+	    fill(255, 0, 0, 40);
+	    ellipse(mouseX, mouseY, 30, 30);
+	}
 }
 
 function keyPressed() {

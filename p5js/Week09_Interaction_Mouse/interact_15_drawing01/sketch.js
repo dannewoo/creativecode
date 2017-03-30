@@ -5,10 +5,14 @@ function setup() {
 }
 
 function draw() {
-
+  if (mouseIsPressed) {
+	fill(255, 0, 0);
+	ellipse(mouseX, mouseY, 20, 20);
+  }
 }
 
-function mouseDragged() {
-  fill(255, 0, 0);
-  ellipse(mouseX, mouseY, 20, 20);
-}
+// Alternative is to use the mouseDragged function
+// function mouseDragged() {
+//   fill(255, 0, 0);
+//   ellipse(mouseX, mouseY, 20, 20);
+// }

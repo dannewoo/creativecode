@@ -5,12 +5,11 @@ function setup() {
 }
 
 function draw() {
-  translate(mouseX, mouseY);
-}
-
-function mouseDragged() {
-  for(var i = 0; i < 10; i++) {
-    strokeWeight(i);
-    point(0, i * -10);
+  if (mouseIsPressed) {
+    translate(mouseX, mouseY);
+    for(var i = 0; i < 10; i++) {
+      strokeWeight(i);
+      point(0, i * -10);
+    }
   }
 }

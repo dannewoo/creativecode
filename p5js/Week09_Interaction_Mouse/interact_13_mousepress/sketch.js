@@ -1,4 +1,4 @@
-var x, y, w, h, c;
+var x, y, w, h;
 
 function setup() {
   createCanvas(600, 400);
@@ -8,20 +8,15 @@ function setup() {
   h = 150;
   x = width/2 - w/2;
   y = height/2 - h/2;
-  c = color(255);
 }
 
 function draw() {
   background(0);
-  fill(c)
-  rect(x, y, w, h);
-}
-
-function mousePressed() {
-  if ((mouseX > x) && (mouseX < x + w) && 
+  if (mouseIsPressed && (mouseX > x) && (mouseX < x + w) && 
       (mouseY > y) && (mouseY < y + h)) {
-    c = color(255, 0, 0);
+    fill(255, 0, 0);
   } else {
-    c = color(255);
+    fill(255);
   }
+  rect(x, y, w, h);
 }

@@ -5,7 +5,6 @@ var x = new Array(circleResolution);
 var y = new Array(circleResolution);
 var speed = 0;
 var easing = 0.07;
-var dragged = false;
 
 function setup() {
   createCanvas(displayWidth, displayHeight);
@@ -28,7 +27,7 @@ function draw() {
   var c = map(speed, 0, 100, 0, 180);
   stroke(360-c, 80, 100, 30);
   // calculate new points
-  if(dragged == true) {
+  if(mouseIsPressed) {
     for (var i = 0; i < circleResolution; i++){
       x[i] += random(-displaceAmount,displaceAmount);
       y[i] += random(-displaceAmount,displaceAmount);
@@ -46,12 +45,4 @@ function draw() {
     curveVertex(x[1], y[1]);
     endShape();
   }
-}
-
-function mousePressed() {
-  dragged = true;
-}
-
-function mouseReleased() {
-  dragged = false;
 }
