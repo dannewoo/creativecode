@@ -9,7 +9,7 @@ function setup() {
   createCanvas(600, 400);
   background(255);
   noStroke();
-  // ADD, SUBTRACT, LIGHTEST, DARKEST, MULTIPLY
-  img1.blend(img2, 0, 0, width, height, 0, 0, width, height, ADD);
+  // ADD, LIGHTEST, DARKEST, MULTIPLY
   image(img1, 0, 0);
+  blend(img2, 0, 0, width, height, 0, 0, width, height, ADD);
 }
