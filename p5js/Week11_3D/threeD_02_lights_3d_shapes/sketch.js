@@ -2,7 +2,7 @@ function setup() {
   createCanvas(600, 400, WEBGL);
   background(0);
   noStroke();
-  fill(200);
+  // fill(200);
 }
 
 function draw() {
