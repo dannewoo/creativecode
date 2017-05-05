@@ -13,4 +13,5 @@ function draw(){
   //pass image as texture
   texture(img);
   box(200, 200, 200);
+  box(400, 100, 100);
 }

@@ -1,5 +1,4 @@
-var osc;
-var fft;
+var osc, fft;
 
 function setup(){
   createCanvas(600,400);
