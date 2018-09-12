@@ -18,6 +18,7 @@ function setup() {
 	bezierVertex(200, 100, 250, 0, 300, 100);
 	vertex(300, 300);
 	vertex(0, 300);
+	vertex(0, 100);
 	endShape();
 }
 
