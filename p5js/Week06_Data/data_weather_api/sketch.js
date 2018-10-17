@@ -2,7 +2,7 @@ var cities = ["San Diego", "New York", "Honolulu"];
 var weather = [];
 
 function preload() {
-  var url = 'http://api.openweathermap.org/data/2.5/weather?q=';
+  var url = 'https://api.openweathermap.org/data/2.5/weather?q=';
   // Please login into http://openweathermap.org/api and get your own appid
   var settings = '&units=imperial'
   var appid = '&appid=2dd2ba333f1580953e2e4bd38c7b227a';
