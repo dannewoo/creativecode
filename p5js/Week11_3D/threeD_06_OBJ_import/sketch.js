@@ -3,7 +3,7 @@ var teapot;
 function setup() {
   createCanvas(600, 400, WEBGL);
   background(0);
-  teapot = loadModel("files/teapot.obj");
+  teapot = loadModel("files/c3po_fixed.stl");
 }
 
 function draw() {
