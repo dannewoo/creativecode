@@ -1,3 +1,12 @@
+:)
+:)
+:)
+:)
+:)
+:)
+:)
+:)
+:)
 //
 // a bar graph for overall smiliness
 //
@@ -57,4 +66,3 @@ void oscEvent(OscMessage m) {
   if (m.isPlugged() == false) {
   }
 }
-

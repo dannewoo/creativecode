@@ -49,7 +49,7 @@ void draw() {
       // Size changes based on the brightness of the pixel
       textSize(sz + 1);
       // Rotate through the string of letters
-      text(letters[(i * j)%letters.length], x + videoScale/2, y + videoScale/2);
+      text(letters[(i + j)%letters.length], x + videoScale/2, y + videoScale/2);
     }
   }
 }

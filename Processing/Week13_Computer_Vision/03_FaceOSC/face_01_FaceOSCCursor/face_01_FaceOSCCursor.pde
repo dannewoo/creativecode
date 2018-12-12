@@ -22,7 +22,7 @@ PVector cursorPosition;
 PFont font;
 
 void setup() {
-  size(displayWidth / 6, displayHeight / 6);
+  size(displayWidth, displayHeight);
   frameRate(30);
   oscP5 = new OscP5(this, 8338);
   oscP5.plug(this, "found", "/found");
@@ -67,4 +67,3 @@ void oscEvent(OscMessage m) {
   if (m.isPlugged() == false) {
   }
 }
-
